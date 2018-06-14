@@ -1,0 +1,16 @@
+<form class="form"  action="/guitars/<%= @guitar.id %>" method="POST">
+  <label>Title:</label><br>
+  <input type="text" name="name" placeholder="The name..." value="<%= @guitar.name %>"><br>
+  <label>Price:</label><br>
+  <input type="text" name="price" placeholder="£0000" value="<%= @guitar.price %>"><br>
+  <label>Image:</label><br>
+  <input type="text" name="img" placeholder="url to image" value="<%= @guitar.img %>"><br>
+  <label>Body:</label><br>
+  <textarea name="description" placeholder="The description..." rows="8" cols="80"><%= @guitar.description %></textarea>
+  <div class="">
+    <input type="submit" value="Save Entry">
+  </div>
+  <% if(@guitar.id) %>
+    <input type="hidden" name="_method" value="PUT">
+  <% end %>
+</form>

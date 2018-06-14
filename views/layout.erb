@@ -6,11 +6,12 @@
     <link rel="stylesheet" href="/style.css">
   </head>
   <body>
-    <div class="yieldedcontent">
-      <%= yield %>
-    </div>
-    <footer>
+    <%= erb :'navbar'%><br>
+    <div class="contentwrapper">
+      <div class="yieldedcontent">
+        <%= yield %>
+      </div>
       <img src="https://i.imgur.com/4L5yX2A.gif" alt="">
-    </footer>
+    </div>
   </body>
 </html>

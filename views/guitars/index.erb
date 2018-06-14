@@ -1,9 +1,11 @@
+<a href="guitars/new">New post</a>
 <h1>Guitars</h1>
 <hr>
 <% @guitars.each do |guitar|%>
   <div class="content">
-    <h3><a href="guitars/<%= guitar.id %>"><%=guitar.id%></a></h3>
-    <p><%=guitar.id[0..35]+"..."%></p>
+    <h3><%=guitar.name%></h3>
+    <p><%=guitar.description[0..60]+"..."%></p>
+    <a href="guitars/<%= guitar.id %>">Read more...</a>
     <hr>
   </div>
 <% end %>
